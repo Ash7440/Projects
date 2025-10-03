@@ -1,0 +1,18 @@
+{
+  "name": "one",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "me",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \\\"error: no test specified\\\" && exit 1\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
