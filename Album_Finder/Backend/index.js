@@ -1,13 +1,16 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
+const morgan = require('morgan')
+const middleware = require('./utils/middleware')
 
 const app = express()
 
 app.use(cors())
 app.use(express.static('dist'))
+app.use(morgan('common'))
 
-app.get('/token', async (req, res) => {
+app.get('/token', async (req, res, next) => {
   try {
     const authString = Buffer.from(
       process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET
@@ -25,10 +28,12 @@ app.get('/token', async (req, res) => {
     const data = await response.json()
     res.json(data)
   } catch (error) {
-    console.error('Token fetch failed:', error)
-    res.status(500).json({ error: 'Failed to fetch token' })
+    next(error)
   }
 })
+
+app.use(middleware.unknownEndpoint)
+app.use(middleware.errorHendler)
 
 const port = process.env.PORT
 app.listen(port, () => console.log(`server is running on port ${port}`))
