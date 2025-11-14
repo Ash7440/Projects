@@ -1,0 +1,110 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 ;
+  text-align: center;
+}
+
+/* Контейнер поиска */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.8s ease; /* плавное движение */
+}
+
+/* После поиска — наверху */
+.search-container.top {
+  margin-top: 30px;
+  min-height: auto;
+}
+
+/* Fade-in анимация для альбомов */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  height: 40px;
+  width: 250px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.search-button {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 5px;
+}
+
+.search-button:hover {
+  background-color: #333;
+}
+
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.album-card {
+  background: white;
+  color: black;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.album-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.album-artists {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.no-albums {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
