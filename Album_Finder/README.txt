@@ -1,26 +1,27 @@
 # Spotify Album Search
 
-Веб‑приложение для поиска альбомов по имени артиста с использованием **Spotify API**.  
-Пользователь вводит имя артиста, получает список альбомов с обложками, датами релиза и ссылками на Spotify.
+A web application for searching albums by artist name using the Spotify API. 
+The user enters the artist’s name and receives a list of albums with covers, release dates, and direct Spotify links.
 
 ---
 
-## Возможности
-- Поиск альбомов по имени артиста
-- Отображение обложки, названия, даты релиза
-- Список артистов, участвующих в альбоме
-- Прямая ссылка «Open in Spotify»
-- Плавная анимация появления карточек
+## Features
+- Search albums by artist name
+- Display album cover, title, and release date
+- List of artists featured on the album
+- Direct link: “Open in Spotify”
+- Smooth card appearance animations
 
 ---
 
-## Технологии
-- **Frontend:** React, CSS (flexbox, анимации)
-- **Backend:** Node.js, Express
-- **API:** Spotify Web API (Client Credentials Flow)
-- **Прочее:** dotenv для переменных окружения, CORS для взаимодействия фронта и бэка
+## Technologies
+- Frontend: React, CSS (flexbox, animations)
+- Backend: Node.js, Express
+- API: Spotify Web API (Client Credentials Flow)
+- Other: dotenv for environment variables, CORS for frontend-backend interaction
 
 ---
 
-## Деплой
-Приложение доступно онлайн: https://album-finder.onrender.com/
+## Deployment
+
+The application is available online: https://album-finder.onrender.com/
