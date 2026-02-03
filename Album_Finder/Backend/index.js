@@ -33,7 +33,7 @@ app.get('/token', async (req, res, next) => {
 })
 
 app.use(middleware.unknownEndpoint)
-app.use(middleware.errorHendler)
+app.use(middleware.errorHandler)
 
 const port = process.env.PORT
 app.listen(port, () => console.log(`server is running on port ${port}`))

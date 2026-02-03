@@ -1,6 +1,6 @@
 const logger = require('./logger')
 
-const errorHendler = (error, request, response, next) => {
+const errorHandler = (error, request, response, next) => {
   logger.error(error.message)
 
   response.status(500).send({ error: 'Failed to fetch token' })
@@ -12,6 +12,6 @@ const unknownEndpoint = (request, response) => {
 }
 
 module.exports = {
-  errorHendler,
+  errorHandler,
   unknownEndpoint,
 }
